@@ -46,7 +46,7 @@ export const FormLogin :IFormLogin[]=[
         placeholder:'Password',
         validation:{
             required:true,
-            minLength:5,
+            minLength:5
         }
     }
 ]

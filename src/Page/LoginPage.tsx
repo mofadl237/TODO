@@ -13,7 +13,7 @@ const LoginPAge = () => {
     const renderLoginForm=FormLogin.map((input,idx)=>{
         return(
             <div key={idx}>
-                <Input type={input.type} placeholder={input.placeholder} name={input.name}/>
+                <Input type={input.type} placeholder={input.placeholder} name={input.name} autoComplete={ input.name==='password' ? 'current-password' :'on'}/>
             </div>
         )
     })
