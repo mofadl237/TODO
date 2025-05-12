@@ -12,6 +12,7 @@ import { useState } from "react";
 import toast from "react-hot-toast";
 import { AxiosError } from "axios";
 import { IErrorResponse } from './../interface/index';
+import {  useNavigate } from "react-router-dom";
 
 interface IFormInput {
   username: string;
@@ -22,7 +23,7 @@ interface IFormInput {
 const RegisterPage = () => {
   //state
   const [isLoading, setIsLoading] = useState(false);
-
+const navigate =useNavigate();
   //Fetch Data &Validation using react hook form
   const {
     register,
@@ -47,7 +48,13 @@ const RegisterPage = () => {
           duration: 2000,
           position: "bottom-center",
         });
+
+        //Navigate 
+        setTimeout(()=>{
+          navigate('/login')
+        },1500)
       }
+
     } catch(error) {
       const errorObj =error as AxiosError<IErrorResponse>;
       toast.error(`${errorObj.response?.data.error.message}`,{
