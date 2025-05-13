@@ -6,6 +6,7 @@ import LoginPAge from "../Page/LoginPage";
 import HomePage from "../Page/HomePage";
 import RegisterPage from "../Page/RegisterPage";
 import NotFoundPage from "../Page/NotFoundPage";
+import ProfilePage from "../Page/ProfilePage";
 
 const userDataString=localStorage.getItem("loggedUser");
 const userData = userDataString ? JSON.parse(userDataString) :null;
@@ -22,6 +23,11 @@ const router =createBrowserRouter(createRoutesFromElements(
         <Route path='login' element={
             <ProtectedRoute isAllowed={true} redirectPath="/" >
                 <LoginPAge/>
+            </ProtectedRoute>
+        }/>
+        <Route path='profile' element={
+            <ProtectedRoute isAllowed={true} redirectPath="/" >
+                <ProfilePage/>
             </ProtectedRoute>
         }/>
         <Route path='register' element={

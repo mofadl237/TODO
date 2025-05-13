@@ -24,7 +24,7 @@ const onLogout=()=>{
         </li>
 {
     userData?.jwt  ? (<div className="flex items-center space-x-3" >
-        <span  className="text-white">{userData.user.username}</span>
+        <Link to='profile'>Profile</Link>
         <span className="text-white cursor-pointer  " onClick={onLogout}>Logout</span>
     </div>):(<div className="flex items-center space-x-3">
             <li className=" duration-200 font-semibold text-lg">
