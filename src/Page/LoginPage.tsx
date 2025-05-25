@@ -99,7 +99,7 @@ const LoginPAge = () => {
       <form className="space-y-4" onSubmit={handleSubmit(onSubmit)}>
         {renderLoginForm}
 
-        <Button isLoading={isLoading}>Login</Button>
+        <Button isLoading={isLoading} className="bg-indigo-700 text-white">Login</Button>
       </form>
     </div>
   );

@@ -28,3 +28,10 @@ export interface IErrorResponse{
         message?:string;
     }
 }
+
+export interface ITodo{
+    documentId?:string;
+    id:number;
+    title:string;
+    description:string;
+}

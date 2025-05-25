@@ -94,7 +94,7 @@ const navigate =useNavigate();
       </h2>
       <form className="space-y-4" onSubmit={handleSubmit(onSubmit)}>
         {renderRegisterForm}
-        <Button isLoading={isLoading}>Register</Button>
+        <Button isLoading={isLoading} className="bg-indigo-700 text-white">Register</Button>
       </form>
     </div>
   );

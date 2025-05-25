@@ -17,13 +17,14 @@ const onLogout=()=>{
 }
 
   return (
-   <nav className="bg-indigo-600 text-white max-w-lg mx-auto mt-7 mb-20 px-3 py-5 rounded-md">
+   <nav className="bg-indigo-600 text-white  mt-7 mb-20 px-3 py-5 rounded-md">
     <ul className="flex items-center justify-between">
         <li  className=" duration-200 font-semibold text-lg">
             <Link to='/'>Home</Link>
         </li>
 {
     userData?.jwt  ? (<div className="flex items-center space-x-3" >
+        <Link to='todos'>Todos</Link>
         <Link to='profile'>Profile</Link>
         <span className="text-white cursor-pointer  " onClick={onLogout}>Logout</span>
     </div>):(<div className="flex items-center space-x-3">

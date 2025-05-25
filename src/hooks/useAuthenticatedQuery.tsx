@@ -9,6 +9,7 @@ interface IProps{
 
 const useAuthenticatedQuery = ({config,url,queryKey}:IProps) => {
   return useQuery({
+    
     queryKey,
     queryFn:async ()=>{
         const {data:res} = await axiosInstance.get(url , config);

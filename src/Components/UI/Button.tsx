@@ -7,7 +7,7 @@ className?:string;
 };
 const Button = ({children,isLoading,className,...rest}:IProps) => {
   return (
-    <button {...rest} className= {`w-full py-3 bg-indigo-700 hover:opacity-90 text-white rounded-md disabled:bg-indigo-400 disabled:cursor-not-allowed ${className} `} disabled={isLoading}>
+    <button {...rest} className= {`w-full py-3  hover:opacity-90  rounded-md disabled:opacity-30 disabled:cursor-not-allowed ${className} `} disabled={isLoading}>
         {isLoading ? 'Loading ...' : children} 
     </button>
   )
